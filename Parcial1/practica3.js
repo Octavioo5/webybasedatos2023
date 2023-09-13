@@ -2,6 +2,7 @@ $(document).ready(function(){
    var carta1=""; var carta2="";
    var par= false;
     var total_pares=0;
+    var total_intentos=0;
     $('img').click(function (e){
           var estado=$(this).attr('data-estado')
         var nombre_img=$(this).attr('data-id')
@@ -47,7 +48,23 @@ $(document).ready(function(){
             $("#total_pares").html(total_pares)
             carta1=""
             carta2=""
+        }else{
+            total_intentos++
         }
+       }
+
+        if(total_intentos>=5){
+            alert("Excediste el numero de intentos permitido")
+            alert("Has perdido el juego")
+            $('img').each(function (){
+            $(this).attr('src','fotos/Tapado.jpg')
+            $(this).attr('data-estado','0')
+            location. reload()
+           
+            
+
+        });
+
        }
 
        if(total_pares==8){
