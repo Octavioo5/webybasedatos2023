@@ -1,42 +1,31 @@
-//cargo en un arreglo las imganes de las banderas. Este sera el orden que se mostrarán
-let banderas = ["mx.png", "br.png", "ar.png", "kr.png", "de.png"];
 
-//arreglo que guardara la opcion correcta
+let banderas = ["mx.png", "br.png", "ar.png", "kr.png", "de.png"];
 let correcta = [2,1,0,2,1];
 
-//arreglo que guardara los paises a mostrar en cada jugada
 let opciones = [];
-//cargo en el arreglo opciones las opciones a mostrar en cada jugada
 opciones.push(["ESCOCIA", "SINGAPUR", "MEXICO"]);
 opciones.push(["ESPAÑA", "BRASIL", "BOLIVIA"]);
 opciones.push(["ARGENTINA", "ANDORRA", "GALES"]);
 opciones.push(["CANADA", "REINO UNIDO", "COREA DEL SUR"]);
 opciones.push(["HONDURAS", "ALEMANIA", "CHINA"]);
 
-//variable que guarda la posicion actual
 let posActual = 0;
-//variable que guarda la cantidad acertadas hasta el moemento
 let cantidadAcertadas = 0;
 
 function comenzarJuego(){
-    //reseteamos las variables
     posActual = 0;
     cantidadAcertadas = 0;
-    //activamos las pantallas necesarias
     document.getElementById("pantalla-inicial").style.display = "none";
     document.getElementById("pantalla-juego").style.display = "block";
     cargarBandera();
 
 }
 
-//funcion que carga la siguiente bandera y sus opciones
 function cargarBandera(){
-    //controlo sis se acabaron las banderas
     if(banderas.length <= posActual){
         terminarJuego();
     }
-    else{//cargo las opciones
-        //limpiamos las clases que se asignaron
+    else{
         limpiarOpciones();
 
         document.getElementById("imgBandera").src = "fotos/" + banderas[posActual];
@@ -72,11 +61,9 @@ function comprobarRespuesta(opElegida){
         document.getElementById("l" + correcta[posActual]).className = "letra letraAcertada";
     }
     posActual++;
-    //Esperamos 1 segundo y pasamos mostrar la siguiente bandera y sus opciones
     setTimeout(cargarBandera,1000);
 }
 function terminarJuego(){
-    //ocultamos las pantallas y mostramos la pantalla final
     document.getElementById("pantalla-juego").style.display = "none";
     document.getElementById("pantalla-final").style.display = "block";
     //agreamos los resultados
@@ -85,7 +72,6 @@ function terminarJuego(){
 }
 
 function volverAlInicio(){
-    //ocultamos las pantallas y activamos la inicial
     document.getElementById("pantalla-final").style.display = "none";
     document.getElementById("pantalla-inicial").style.display = "block";
     document.getElementById("pantalla-juego").style.display = "none";
