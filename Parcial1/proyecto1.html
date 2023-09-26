@@ -6,42 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="proyecto1.css">
     <script src="proyecto1.js"></script>
-    <title> Proyecto 1</title>
+    <title> Banderas </title>
+    
+    
 </head>
 <body>
-    <h1>JUEGO DE LAS BANDERAS</h1>
-
-    <div id="pantalla-inicial">
-        <p>ADIVINA DE QUE PAIS ES LA BANDERA</p>
-        <button class="btn" onclick="comenzarJuego()">Iniciar el juego</button>
+    
+    <h1> Juegos de las banderas </h1>
+    <div id="pantalla-ini">
+        <p> Adivina la bandera del siguiente pais </p>
+        <button class="btn" onclick="Iniciar()">Iniciar el juego</button>
+        <div style="color: black, 10px;"><br><br><br><br> Lopez Sainz Sergio Octavio <br> Perez Rojas Angel Eduardo <br> Martinez Blancas Ximena Noemmi</div>
     </div>
 
-    <div class="pantalla-juego" id="pantalla-juego">
+    <div class="pantalla-juego" id="pantalla-juego" >
         <img src="fotos/ad.svg" alt="" id="imgBandera">
         <div class="opciones">
-            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+           
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0) ">
                 <div class="letra" id="l0">A</div>
-                <div class="nombre" id="n0">OPCION A</div>
+                <div class="nombre" id="n0">opcion A</div>
             </div>
+
             <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
                 <div class="letra" id="l1">B</div>
-                <div class="nombre" id="n1">OPCION B</div>
+                <div class="nombre" id="n1">Opcion B</div>
             </div>
+
             <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
                 <div class="letra" id="l2">C</div>
-                <div class="nombre" id="n2">OPCION C</div>
+                <div class="nombre" id="n2">Opcion C</div>
             </div>
         </div>
     </div>
-
-    <div id="pantalla-final">
-        <h2>CORRECTAS: <span id="numCorrectas">3</span></h2>
-        <h2>INCORRECTAS: <span id="numIncorrectas">2</span></h2>
-        <button class="btn" onclick="volverAlInicio()">VOLVER AL INICIO</button>
-    </div>
-
-
     
+
+    <div id="pantalla-fin">
+        <h2>Correctas: <span id="numCorrectas">3</span></h2>
+        <h2>Incorrectas: <span id="numIncorrectas">2</span></h2>
+        <button class="btn" onclick="volverAlInicio()"> Regresar al inicio </button>
+    </div>
    
+      
 </body>
 </html>

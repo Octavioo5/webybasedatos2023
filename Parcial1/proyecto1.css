@@ -1,26 +1,26 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Skranji:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@900&display=swap');
 *{
     box-sizing: border-box;
-    font-family: 'Skranji', cursive;
+    font-family: 'Lexend Deca', sans-serif;
     color: #fff;
+    font-size: 45px;
   
 }
-body{
+    body{
     background: url(fotos/fondo.jpg);
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
 }
-h1{
+    h1{
     width: fit-content;
-    background-color: #01ac29;
+    background-color: #00ae2990;
     margin: 40px auto;
-    border-radius: 60px;
+    border-radius: 50px;
     box-shadow: 5px 5px 0 #000;
-    padding: 20px 30px;
+    padding: 30px 40px;
 }
-footer{
+    footer{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -33,41 +33,40 @@ footer{
     text-align: center;
 }
 
-#pantalla-inicial{
+    #pantalla-ini{
     display: block;
     text-align: center;
     font-size: 30px;
 }
-#pantalla-inicial{
+    #pantalla-ini{
     margin: 60px 0;
 }
-.btn{
+    .btn{
     border: none;
-    background: #03779e;
+    background: #9d00006f;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 50px;
+    padding: 15px 25px;
+    border-radius: 40px;
     cursor: pointer;
     transition: .5s;
 }
-.btn:hover{
+    .btn:hover{
     transform: scale(1.1);
 }
 
-
-#pantalla-juego{
+    #pantalla-juego{
     display: none;
 }
-.pantalla-juego{
+    .pantalla-juego{
     max-width: 800px;
     margin: 50px auto;
     text-align: center;
 }
-.pantalla-juego img{
+    .pantalla-juego img{
     max-width: 400px;
     width: 100%;
 }
-.opciones{
+    .opciones{
     max-width: 400px;
     margin: auto;
 }
@@ -80,22 +79,22 @@ footer{
     cursor: pointer;
 }
 .opcion .letra{
-    background-color: #00ae0c;
-    width: 50px;
+    background-color: #0082ae;
+    width: 60px;
     height: 50px;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     border-radius: 50%;
     line-height: 35px;
-    border: 5px solid #fff;
+    border: 5px solid #ffffff;
     position: relative;
 }
 .opcion .nombre{
-    background: #00ab7b;
+    background: #009d25ab;
     width: 100%;
-    font-size: 25px;
+    font-size: 35px;
     position: absolute;
     margin-left: 30px;
     z-index: -2;
@@ -120,24 +119,23 @@ footer{
     background-color: darkred;
     color: #fff;
 }
-
-#pantalla-final{
+#pantalla-fin{
     display: none;
     text-align: center;
 }
-#pantalla-final #numCorrectas{
+#pantalla-fin #numCorrectas{
     background-color: chartreuse;
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 65px;
     border-radius: 50%;
     border: 5px solid #fff;
 }
-#pantalla-final #numIncorrectas{
+#pantalla-fin #numIncorrectas{
     background-color: darkred;
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 65px;
     border-radius: 50%;
     border: 5px solid #fff;
 }
