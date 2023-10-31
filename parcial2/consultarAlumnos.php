@@ -47,7 +47,7 @@
                                     <td><?php echo $registro["sexo"]; ?></td>
                                     <td>
                                         <a href="" class="btn btn-primary">Editar</a>
-                                        <a href="" class="btn btn-danger">Borrar</a>
+                                        <a href="eliminarAlumno.php?id=<?php echo $registro["id"]; ?>" class="btn btn-sm btn-danger">
                                     </td>
                                 </tr>
                             <?php } ?>
