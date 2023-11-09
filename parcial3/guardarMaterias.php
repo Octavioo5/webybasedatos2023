@@ -6,7 +6,7 @@
         $semestre=$_POST["semestre"];
         $especialidad=$_POST["especialidad"];
 
-        $sql= "INSERT INTO materias(nombre,especialidad,semestre) VALUES ('" .$nombre."',".$semestre.",'".$especialidad. "')";
+        $sql= "INSERT INTO materias(nombre,semestre,especialidad) VALUES ('" .$nombre."',".$semestre.",'".$especialidad. "')";
 
         if($conexion->query($sql) === TRUE){
             header("Location: consultarMaterias.php");
