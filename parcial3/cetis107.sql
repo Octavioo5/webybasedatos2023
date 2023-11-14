@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 08, 2023 at 03:11 AM
+-- Generation Time: Nov 14, 2023 at 03:18 AM
 -- Server version: 10.1.39-MariaDB
 -- PHP Version: 7.3.5
 
@@ -53,6 +53,18 @@ INSERT INTO `alumnos` (`id`, `nombre`, `numero_control`, `semestre`, `edad`, `tu
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `alumnos_materias`
+--
+
+CREATE TABLE `alumnos_materias` (
+  `id` int(11) NOT NULL,
+  `alumno_id` int(11) NOT NULL,
+  `materia_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `materias`
 --
 
@@ -71,9 +83,7 @@ INSERT INTO `materias` (`id`, `nombre`, `semestre`, `especialidad`) VALUES
 (1, 'Ingles V', 5, 'Programacion'),
 (2, 'Fisica II', 5, 'Programacion'),
 (3, 'Calculo Integral', 5, 'Programacion'),
-(4, 'C. T. S. y V.', 5, 'Programacion'),
-(5, 'Adrina', 0, '3'),
-(6, 'Pepito', 0, '5');
+(4, 'C. T. S. y V.', 5, 'Programacion');
 
 --
 -- Indexes for dumped tables
@@ -83,6 +93,12 @@ INSERT INTO `materias` (`id`, `nombre`, `semestre`, `especialidad`) VALUES
 -- Indexes for table `alumnos`
 --
 ALTER TABLE `alumnos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `alumnos_materias`
+--
+ALTER TABLE `alumnos_materias`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -100,6 +116,12 @@ ALTER TABLE `materias`
 --
 ALTER TABLE `alumnos`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `alumnos_materias`
+--
+ALTER TABLE `alumnos_materias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `materias`
